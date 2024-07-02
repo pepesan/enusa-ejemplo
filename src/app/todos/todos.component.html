@@ -10,12 +10,16 @@
   <ul>
     <li *ngFor="let todo of todos">
       {{todo.text}}
+      <button (click)="deleteTodo(todo.text)">Borrar</button>
     </li>
   </ul>
   <h3>Listado de tareas con Control Flow</h3>
   <ul>
     @for (todo of todos; track todo.id) {
-      <li> {{ todo.text }} </li>
+      <li>
+        {{ todo.text }}
+        <button (click)="deleteTodo(todo.text)">Borrar</button>
+      </li>
     }
   </ul>
 </div>

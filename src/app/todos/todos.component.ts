@@ -46,4 +46,13 @@ export class TodosComponent{
     this.todos.push(this.todo);
     this.todo = new Todo();
   }
+
+  deleteTodo(texto: string){
+    for(var i=0;i<this.todos.length;i++){
+      var todo=this.todos[i];
+      if(todo.text==texto){
+        this.todos.splice(i,1);
+      }
+    }
+  }
 }
