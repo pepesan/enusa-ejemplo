@@ -1,0 +1,8 @@
+<h3>Listado de partidos</h3>
+<ul>
+  <!-- | async usa la promesa para esperar a que estén los datos antes de pintarlos -->
+  <li *ngFor="let resultado of partidos | async">
+    {{resultado.nombre}}: {{resultado.dipu}}
+    <img src="https://pactometro.cursosdedesarrollo.com/img/{{resultado.imagen}}" width="90px" height="90px"/>
+  </li>
+</ul>
