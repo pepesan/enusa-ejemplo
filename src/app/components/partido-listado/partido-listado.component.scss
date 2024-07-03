@@ -1,0 +1,51 @@
+ul {
+  display: grid;  // Usar CSS Grid
+  gap: 20px;  // Espacio entre los elementos
+  padding: 0;  // Eliminar el padding del ul
+  list-style-type: none;  // Eliminar los puntos de la lista
+  margin: 0;  // Eliminar margen del ul
+
+  // Configuraciones de Grid para diferentes tamaños de pantalla
+  @media (min-width: 320px) {
+    grid-template-columns: repeat(1, 1fr);  // 1 columna en pantallas pequeñas
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);  // 2 columnas en pantallas medianas
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);  // 3 columnas en pantallas grandes
+  }
+
+  @media (min-width: 1440px) {
+    grid-template-columns: repeat(4, 1fr);  // 4 columnas en pantallas extra grandes
+  }
+}
+
+li {
+  display: flex;  // Hacer que el contenido del li esté en línea
+  align-items: center;  // Alinear verticalmente los elementos del li
+  padding: 10px;  // Añadir espacio interno
+  border: 1px solid #ddd;  // Añadir borde a los elementos de la lista
+  border-radius: 5px;  // Bordes redondeados
+  transition: background-color 0.3s ease;  // Transición para el cambio de color de fondo
+  background-color: #fff;  // Fondo blanco para los elementos
+
+  &:hover {
+    background-color: #f5f5f5;  // Cambiar el color de fondo al pasar el mouse
+  }
+}
+
+img {
+  margin-left: auto;  // Alinear la imagen a la derecha
+  border-radius: 50%;  // Hacer que las imágenes sean circulares
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Añadir sombra a las imágenes
+}
+
+h3 {
+  font-size: 1.5em;  // Aumentar el tamaño de la fuente del título
+  margin-bottom: 20px;  // Añadir espacio debajo del título
+  color: #333;  // Cambiar el color del título
+  text-align: center;  // Centrar el título
+}

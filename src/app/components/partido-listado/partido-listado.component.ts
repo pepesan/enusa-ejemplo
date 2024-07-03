@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal, WritableSignal} from '@angular/core';
 import {PartidoService} from "../../services/partido.service";
 import {AsyncPipe, NgForOf} from "@angular/common";
 import {Partido} from "../../classes/partido";
@@ -15,6 +15,12 @@ import {Partido} from "../../classes/partido";
 })
 export class PartidoListadoComponent {
   // transforma el Observable<Partido[]> a Promise<Partido[]>
-  partidos: Promise<Partido[]| undefined> = this.partidoService.getData().toPromise();
-  constructor(protected partidoService: PartidoService) { }
+  partidos: Promise<Partido[]| undefined>;
+  partidosSignal: WritableSignal<Partido[]> = signal<Partido[]>([]);
+  constructor(protected partidoService: PartidoService) {
+    this.partidos = this.partidoService.getData().toPromise();
+    this.partidoService.getData().subscribe(data => {
+      this.partidosSignal.set(data);
+    });
+  }
 }
