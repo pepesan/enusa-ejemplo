@@ -30,10 +30,10 @@ li {
   border: 1px solid #ddd;  // Añadir borde a los elementos de la lista
   border-radius: 5px;  // Bordes redondeados
   transition: background-color 0.3s ease;  // Transición para el cambio de color de fondo
-  background-color: #fff;  // Fondo blanco para los elementos
+  background-color: #e0f7fa;  // Fondo blanco para los elementos
 
   &:hover {
-    background-color: #f5f5f5;  // Cambiar el color de fondo al pasar el mouse
+    background-color: #b2ebf2;  // Cambiar el color de fondo al pasar el mouse
   }
 }
 
