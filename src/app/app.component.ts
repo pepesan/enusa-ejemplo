@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {TodosComponent} from "./components/todos/todos.component";
 import {UsaServicioComponent} from "./components/usa-servicio/usa-servicio.component";
 import {PartidoListadoComponent} from "./components/partido-listado/partido-listado.component";
@@ -11,7 +11,9 @@ import {PartidoListadoComponent} from "./components/partido-listado/partido-list
     RouterOutlet,
     TodosComponent,
     UsaServicioComponent,
-    PartidoListadoComponent
+    PartidoListadoComponent,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

@@ -11,9 +11,12 @@
 <main class="main">
   <h2>Bienvenidas</h2>
   <h3>{{title}}</h3>
-  <app-todos></app-todos>
-  <app-usa-servicio></app-usa-servicio>
-  <app-partido-listado></app-partido-listado>
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a></li>
+    </ul>
+  </nav>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
